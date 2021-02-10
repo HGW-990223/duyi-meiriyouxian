@@ -1,0 +1,48 @@
+.menu{
+  height: 100%;
+  .menu-list{
+    width: 180px;
+    height: 100%;
+
+    position: fixed;
+    .ant-menu{
+      height: 100%;
+    }
+  }
+  .content{
+    margin-left: 180px;
+    transition: all .3s;
+    border-bottom: 1px solid #eee;
+
+    &.menu-unfold{
+      margin-left: 80px;
+    }
+    .con-head{
+      padding-left: 10px;
+      padding-right: 20px;
+      height: 50px;
+      line-height: 50px;
+      .btn,.crumbs{
+        display: inline-block;
+      }
+      .crumbs{
+        margin-left: 10px;
+      }
+      .user{
+        float: right;
+        text-align: center;
+        li:not(:first-child){
+          display: none;
+          background: #eee;
+          color: #999;
+        }
+        &:hover{
+          li{
+            display: block;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

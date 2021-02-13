@@ -3,6 +3,7 @@
 		<left-menu></left-menu>
 		<div :class="{'content': true,'menu-unfold':$store.state.collapsed}">
       <slide-nav></slide-nav>
+      <router-view></router-view>
     </div>
 	</div>
 </template>
@@ -15,16 +16,6 @@ export default {
     LeftMenu,
     SlideNav,
   },
-	data() {
-		return {
-			collapsed: false,
-		}
-	},
-	methods: {
-		toggleCollapsed() {
-			this.collapsed = !this.collapsed
-		},
-	},
 }
 </script>
 

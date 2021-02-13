@@ -17,10 +17,10 @@
 		</div>
 		<ul class="user">
 			<li>
-				欢迎huangguangwen
+				{{ $store.state.user.username }}
 				<a-icon type="down" />
 			</li>
-			<li>退出</li>
+			<li @click="removeUserCookie">退出</li>
 		</ul>
 	</div>
 </template>
@@ -30,6 +30,10 @@ export default {
   methods: {
     toggleCollapsed () {
       this.$store.dispatch('toggleCollapsed')
+    },
+    removeUserCookie () {
+      this.$store.dispatch('logout')
+      this.$router.push({name: 'Login'})
     }
   }
 }
